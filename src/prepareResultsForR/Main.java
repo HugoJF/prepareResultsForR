@@ -31,7 +31,7 @@ public class Main {
 		String name = null;
 		
 		final JFileChooser fc = new JFileChooser();
-		fc.setCurrentDirectory(new File("D:\\Projects\\INOVISAOs\\experiments"));
+		fc.setCurrentDirectory(new File("D:\\Projects\\INOVISAOs\\artigo\\for_r_testing\\"));
 		
 		while(true) {
 			int openResult = fc.showOpenDialog(null);
@@ -63,7 +63,7 @@ public class Main {
 		PrintWriter writer = null;
 		for(Metric m : Metric.values()) {
 			try {
-				writer = new PrintWriter(new File("D:\\Projects\\INOVISAOs\\experiments\\" + m.getExt()));
+				writer = new PrintWriter(new File("D:\\Projects\\INOVISAOs\\artigo\\for_r_testing\\" + m.getExt()));
 				writer.println("tecnica desempenho classe");
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
